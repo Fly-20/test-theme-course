@@ -56,7 +56,11 @@ jobs:
         with:
           path: ./public
 
-      - uses: actions/upload-artifact@v3
+      - name: Upload Hugo build (debug backup)
+        uses: actions/upload-artifact@v3
+        with:
+          name: hugo-build
+          path: ./public
 
   # Deploy website to GitHub Pages hosting
   deploy:
